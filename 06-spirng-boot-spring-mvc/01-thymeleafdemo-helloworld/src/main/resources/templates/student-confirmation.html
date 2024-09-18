@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student confirmation</title>
+</head>
+<body>
+<h3>Student confirmation</h3>
+    The student is confirmed: <span th:text="${student.firstName} + ' ' + ${student.lastName}"/><br>
+    Country: <span th:text="${student.country}"/><br>
+    Favourite language: <span th:text="${student.favouriteLanguage}"/><br>
+    Favourite operating systems:
+    <ul>
+        <li th:each="tempOS: ${student.favouriteSystems}" th:text="${tempOS}"/>
+    </ul>
+
+    <br>
+</body>
+</html>
